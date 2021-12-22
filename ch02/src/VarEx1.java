@@ -9,5 +9,4 @@ public class VarEx1 {
 		System.out.println(x*3);
 		System.out.println(x/3);
 	}
-
 }

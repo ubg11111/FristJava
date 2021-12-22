@@ -10,9 +10,19 @@ public class VarEx3 {
 //		\n 개행 문자로 문자열 앞에 사용하게 되면 기준으로 줄바꿈을 시행함 
 		String name = "Java \nRun";
 		
-		System.out.println(read);
-		System.out.println(name);
-	
+		char ch = 'A';
+		int i = 'A';
+		
+		String str = ""; // 빈 문자열 (empty string)
+		String str2 = "ABCD";
+		String str3 = "123";
+		
+		System.out.println(i);
+		System.out.println(str);
+		System.out.println(str2);
+		System.out.println(str3);
+		System.out.println(str2+str3);
+	  
 	}
 
 }
