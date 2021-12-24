@@ -23,7 +23,7 @@ public class printfEx1 {
 		
 		double d = 1.23456789;
 		System.out.printf("%14.6f%n", d); // 14 총 14자리값 중 . 6 자리는 소수점 자리를수를 출력 
-		
+		 
 		System.out.printf("[%s]%n", "www.codepen.com");
 		System.out.printf("[%-20s]%n", "www.codepen.com");
 	}
