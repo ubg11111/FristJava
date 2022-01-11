@@ -16,6 +16,6 @@ public class Ex5_14 {
 		System.out.println(ch);
 		System.out.println(st);
 		System.out.println(st2);
-	
+	// 메서드 기능은 중요시해야한다.
 	}  
 }
