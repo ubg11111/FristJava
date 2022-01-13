@@ -1,4 +1,4 @@
-package ch06;
+
 
 public class Ex6_2 {
 	public static void main(String[] args) {
@@ -14,5 +14,7 @@ public class Ex6_2 {
 		t2 = t1; // 참조 변수 t1의 값을 t2에 저장.
 		System.out.println("t1의 channel값은" + t1.channel + "입니다.");
 		System.out.println("t1의 channel값은" + t2.channel + "입니다.");
+		
 	} // 기존 t2는 가비지컬렉터에 의해 메모리값이 정리됨 
 }
+ 

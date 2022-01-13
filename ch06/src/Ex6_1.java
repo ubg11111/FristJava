@@ -1,4 +1,4 @@
-package ch06;
+
 
 public class Ex6_1 {
 	// 객체의 생성과 사용
