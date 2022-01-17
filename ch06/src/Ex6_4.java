@@ -8,6 +8,7 @@ class Ex6_4 {
 		double result4 = mm.divide(5L, 3L);
 		long result5 = mm.max(5, 3);
 		long result6 = mm.min(5, 3);
+		mm.printGugudan(6); // 구구단 3단을 출력
 		
 		
 		System.out.println("add(5L, 3L) = " + result1 + "L");
@@ -20,6 +21,15 @@ class Ex6_4 {
 }
 
 class MyMath{
+	void printGugudan(int dan) {
+		if(!(2<=dan && dan <=9)) {
+			return; // 입력받은 단(dan)이 2~9가 아니면, 메서드 종료하고 리턴하여 돌아감
+		}
+		for(int i=1; i<10; i++) {
+			System.out.printf("%d * %d = %d%n", dan, i, dan * i);
+		}
+	}
+	
 	long add(long a, long b) {
 		long result = a + b;
 		return result;
@@ -27,7 +37,11 @@ class MyMath{
 	}
 	// 두 값을 받아서 둘중에 큰 값을 반환하는 메서드를 작성하시오.
 	long max(long a , long b){
-		return a > b ? a:b; // 삼항연산자 최대값 
+		if(a>b) {
+			return a; // void가 없는경우 return문 생략 불가능 
+		}else{
+			return b; // 조건식이 참일때만 리턴문이 반환되기에 반드시 else문도 같이 리턴값을 반환해줘야한다.
+		}
 	}
 	long min(long a , long b) {
 		return a < b ? a:b; // 삼항연사자 최소값
