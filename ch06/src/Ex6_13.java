@@ -37,10 +37,15 @@ class Car2{
 	}
 	
 	Car2(String color){ // 매개변수에 값을 준 클래스변수 
-		this(color,"auto",4);
+		this(color,"auto",4); // 다른 생성자를 호출시 >> this(), this(매개변수) 생성자, 같은 클래스의 다른 생성자를 호출할 때 사용한다. (중복코드 제거에 사용한다).
 	}
 	
-	Car2(String color, String gearType, int door){ 
+	Car2(String color, String gearType){ // 2개의 인자를 가진 매개변수
+		this.color = color; // this 인스턴스 자신을 가리키는 참조변수, 인스턴스의 주소가 저장되어 있음. 모든 인스턴스메서드에 지역변수로 숨겨진 채로 존재 (this 선언안해도 사용가능하다)
+		this.gearType = gearType;
+	}
+	
+	Car2(String color, String gearType, int door){ // 3개의 인자를 가진 매개변수 
 		this.color = color; // this 인스턴스 자신을 가리키는 참조 변수
 		this.gearType = gearType;
 		this.door = door;
@@ -53,9 +58,11 @@ class Car2{
 public class Ex6_13 {
 	public static void main(String[] args) {
 		Car2 c1 = new Car2();
-		Car2 c2 = new Car2("blue");
+		Car2 c2 = new Car2("blue"); // 1개의 클래스인자를 호출
+		Car2 c3 = new Car2("red","none"); // 2개의 클래스인자를 호출
 		
 		System.out.println("c1의 color = " + c1.color + ", gearType = " + c1.gearType + ", door = " + c1.door);
 		System.out.println("c2의 color = " + c2.color + ", gearType = " + c2.gearType + ", door = " + c2.door);
+		System.out.println("c3의 color = " + c3.color + ", gearType = " + c3.gearType + ", door = " + c2.door);
 	}
 }
