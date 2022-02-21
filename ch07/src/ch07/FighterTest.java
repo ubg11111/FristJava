@@ -11,10 +11,6 @@ abstract class Unit2{
 
 
 //인터페이스의 모든 메서드는 public abstract. 예외없다.
-interface Fightable{
-	void move(int x, int y); // public abstract 생략됨
-	void attack(String f); // public abstract 생략됨
-}
 
 class Fighter extends Unit2 implements Fightable{
 	
