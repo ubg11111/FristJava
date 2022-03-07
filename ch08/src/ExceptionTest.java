@@ -15,7 +15,6 @@ public class ExceptionTest { // 여기서도 extends Object가 생략되어있�
 	
 	public static void main(String[] args) {
 		
-		
 		try {
 		System.out.println(args[0]); // 컴파일 에러 예시로 System의 S를 s로 바꾸는경우
 		}
