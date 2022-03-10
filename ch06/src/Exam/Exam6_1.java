@@ -10,7 +10,6 @@ public class Exam6_1{
 	}
 }
 
-
 class Student{
 	
 	String name;

@@ -10,9 +10,10 @@ class LGTV32{
 	int date;
 	int inch;
 	
+	
 	LGTV32(){} // 기본생성자 생성
 	
-	LGTV32(String name, int date, int inch){
+	LGTV32(String name, int date, int inch){ // 매개변수 생성자 생성
 		this.name = name;
 		this.date = date;
 		this.inch = inch;
@@ -22,11 +23,13 @@ class LGTV32{
 		System.out.println(name + "에서 만든 " + date + "년형 " + inch + "인치 TV");
 	}
 	
+	
 }
 
 public class LGTv {
 	public static void main(String[] args) {
-		LGTV32 tv = new LGTV32("LG", 2017, 32);
+		LGTV32 tv = new LGTV32("LG", 2017, 32); // 매개변수 생성자 접근
+	
 		
 		tv.show();
 	}
