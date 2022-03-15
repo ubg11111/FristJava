@@ -11,8 +11,8 @@ public class Ex7_3 {
 	}
 }
 
-abstract class Parent2{
-	int x =10; // super.x 와 this.x 둘다 접근이 가능하다.
+class Parent2{
+	int x = 10; // super.x 와 this.x 둘다 접근이 가능하다.
 }
 
 class Child2 extends Parent2{

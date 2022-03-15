@@ -57,9 +57,12 @@ public class Ex_7_1 {
 		// 자손이 부모클래스로부터 상속받는경우 부모클래스의 객체생성은 불가능함.
 		SmartTv stv = new SmartTv();
 		
+		//조상으로부터 상속받은 멤버
 		stv.channel = 10;
 		stv.channelUp();
 		System.out.println(stv.channel);
+		
+		
 		stv.displayCaption("Hello, world");
 		stv.caption = true; // 캡션(자막) On
 		stv.displayCaption("Hello, world");

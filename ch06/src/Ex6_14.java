@@ -16,7 +16,7 @@ class MyRoom{
 	String color; // 인스턴스 변수
 	String computer;
 	String bad;
-	int door;
+	int door = 4; // 명시적 초기화 (=) 대입연산자를 통한 초기화
 	
 	void rooms(){ // 인스턴스 메서드
 		System.out.println("내 방의 색은 : " + color);

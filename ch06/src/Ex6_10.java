@@ -19,8 +19,8 @@ class MyMath2{
 
 class Ex6_10 {
 	public static void main(String[] args) {
-		// 클래스 메서드 호출. 인스턴스 생성 없이 바로 호출 가능
-		
+	
+	// 클래스 메서드 호출. 인스턴스 생성 없이 바로 호출 가능
 	System.out.println(MyMath2.add(200L, 100L));
 	System.out.println(MyMath2.subtract(200L, 100L));
 	System.out.println(MyMath2.multiply(200L, 100L));

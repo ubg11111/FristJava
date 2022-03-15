@@ -5,10 +5,10 @@ class Car{
 	
 	Car(){} // 기본생성자 생성
 	
-	Car(String c , String g, int d){
-		color = c; // white
-		gearType = g; // auto
-		door = d; // 4
+	Car(String c , String g, int d){ // 매개변수 생성자 생성
+		this.color = c; // white
+		this.gearType = g; // auto
+		this.door  = d; // 4
 	}
 }
 
@@ -22,12 +22,13 @@ class Ex6_12 {
 		c1.door = 4; 
 	
 	
-		Car c2 = new Car("white", "auto", 4); // 매개변수가 있는 생성자 
+		Car c2 = new Car("red", "auto", 4); // 매개변수가 있는 생성자 
 		
 		// c1의 객채생성 변수초기화 == c2의 매개변수가 생성자로 초 기화는 동일하다
 		
 		System.out.println("c1의 color = " + c1.color + ", gearType = " + c1.gearType + ", door = " + c1.door); // 기본생성자 있는 c1의 출력물
 		System.out.println("c2의 color = " + c2.color + ", gearType = " + c2.gearType + ", door = " + c2.door); // 매개변수가 있는 생성자 c2의 출력물
+
 	
 	}
 }

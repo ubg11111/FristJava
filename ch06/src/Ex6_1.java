@@ -7,14 +7,21 @@ public class Ex6_1 {
 //		t1 = new Tv(); // Tv인스턴스를 생성한다. ===> 2번
 		
 		Tv t1 = new Tv(); // 1번과 2번을 합쳐서 클래스 호출을 하는것.
+		Tv t2 = new Tv(); // 0x200 다른 주소의 객체를 생성함
 		
+		
+		// 참조변수를 이용하여 객체를 사용한다.
 		t1.channel = 7; // Tv 인스턴스의 멤버변수 channel의 값을 7로 변경한다.
 		t1.channelDown(); // Tv인스턴스의 메서드 channelDown()을 호출한다.
+		
+		
+		t2 = t1; // t2의 주소에 t1의 주소를 넣어준다
+		// t1 = 주소 0x100
+		// t2 = 주소 0x200 
+		// 요부분을 t1이 => t2로 선언되면서 t1과 t2가 0x100주소를 같이 가르키게 된다. 기존에 있던 0x200주소는 GC에 의해서 메모리가 정리된다.
+		
 		System.out.println("현재 채널은 " + t1.channel + "입니다.");
-		
-		
-		
-		System.out.println("현재 채널은 " + t1.channel + "입니다.");
+		System.out.println("현재 채널은 " + t2.channel + "입니다.");
 	}
 }
 

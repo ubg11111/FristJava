@@ -34,11 +34,21 @@ class FavoriteSong{
 		this.country = country;
 	};
 	
+	
+	// 메서드
 	void show() {
 		System.out.println(year + "년 " + country + "국적의 " + artist + "가 부른 " + songname);
+		
 	}
 	
+	// 지역변수(lv) : 메서드 내에 선언된 변수
+	int add(int a, int b) { // 메서드영역
+		int result = a * b;
+		
+		return result;
+	} // 메서드영역 end
 }
+
 
 public class Song {
 
@@ -55,6 +65,9 @@ public class Song {
 		
 		// 매개변수생성자로 객체를 생성하여 인자를 넘겨주어 접근하는 경우.
 		FavoriteSong fs = new FavoriteSong("Dancing Queen","ABBA",1978,"스페인");
+		
 		fs.show();
+		int result = fs.add(10, 20);
+		System.out.println(result);
 	}
 }
