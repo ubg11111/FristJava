@@ -34,6 +34,9 @@ public class Instanceof {
 	
 	public static void main(String[] args) {
 		
+		
+		// 상속계층도에서의 instancof를 사용시 자식객체의 모든 조상까지 true값을 반환한다.
+		// 그렇다고 참조변수가 해당객체를 사용한다는건 아니기에 이점은 주의해야한다.
 		FireEngine fe = new FireEngine();
 		System.out.println(fe instanceof Object); // FireEngine의 조상은 Object인가?
 		System.out.println(fe instanceof Car); // FireEngine이 조상은 Car인가?

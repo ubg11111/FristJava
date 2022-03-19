@@ -4,9 +4,11 @@ import java.util.Scanner;
 
 class Time{
 	private int hour; // 0 ~ 23 사이의 절대적인 값을 가져야함.
-	private int minute;
+	private int minute; // 0 ~ 59 사이의 절대적인 값
 	private int second;
 	
+	
+	public int su;
 	
 	public void setHour(int hour) { // set메서드
 		if(isNotValidHour(hour)) {
@@ -17,12 +19,22 @@ class Time{
 		this.hour = hour;
 	}
 	
+	public void setMinute(int minute) {
+		if((minute < 0) || (minute > 59)) {
+			System.out.println("분을 잘못 입력하셨습니다.");
+			return;
+		}
+		this.minute = minute;
+	}
+	
 	// 매개변수로 넘겨진 hour가 유효한지 확인해서 알려주는 메서드
 	private boolean isNotValidHour(int hour) { // 굳이 내부클래스에서만 사용을 하는 메서드라면 private로 하는것이 데이터 보호에 좋다.
 		return hour < 0 || hour > 23;
 	}
 	
 	public int getHour() {return hour;} // get 메서드
+	
+	public int getMinute() {return minute;} // 분의 메서드
 }
 
 
@@ -34,10 +46,14 @@ public class TitmeTest {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		
 		System.out.print("시간을 입력하세요 >>> ");
 		t.setHour(sc.nextInt());
+		System.out.print("분을 입력하세요 >>> ");
+		t.setMinute(sc.nextInt());
+
 		
-		System.out.println("현재 시간은 : " + t.getHour() + " 시 입니다.");
+		System.out.println("현재 시간은 : " + t.getHour() + "시" + t.getMinute() + "분" +  "입니다.");
 		
 		sc.close();
 	}
